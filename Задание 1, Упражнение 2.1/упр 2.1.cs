@@ -9,5 +9,3 @@ public class MainClass
         Console.WriteLine($"Привет, {user_name}!");
     }
 }
-
-
