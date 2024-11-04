@@ -100,7 +100,93 @@ public class MainClass
         Console.WriteLine("\tТруд");
         Console.WriteLine("\t\tМай");
         */
+        Console.WriteLine("Упражнение 12");
+        Console.WriteLine();
+        Console.WriteLine("1.Треугольник");
+        Console.WriteLine("2.Четырехугольник");
+        Console.WriteLine("3.Круг");
 
+        Console.Write("Выберите фигуру от 1 до 3: ");
+        int shape = int.Parse(Console.ReadLine());
+
+        Console.WriteLine();
+
+        Console.WriteLine("Что вы хотите вычислить?");
+        Console.WriteLine("1.Периметр");
+        Console.WriteLine("2.Площадь");
+        Console.Write("Выберите от 1 до 2: ");
+        int type_of_operation = int.Parse(Console.ReadLine());
+
+        Console.WriteLine();
+
+        // аааа что то сложное сейчас будет не хочууууууу
+        double pi = Math.PI;
+        double result = 0;
+
+        switch (shape)
+        {
+            case 1: // Треугольник
+                switch (type_of_operation)
+                {
+                    case 1: // Периметр
+                        Console.Write("Введите сторону a: ");
+                        double a = double.Parse(Console.ReadLine());
+                        Console.Write("Введите сторону b: ");
+                        double b = double.Parse(Console.ReadLine());
+                        Console.Write("Введите сторону c: ");
+                        double c = double.Parse(Console.ReadLine());
+                        result = a + b + c;
+                        break;
+                    case 2: // Площадь
+                        Console.Write("Введите основание: ");
+                        double base_triangle = double.Parse(Console.ReadLine()); // ругается на одинаковые название с case 1
+                        Console.Write("Введите высоту: ");
+                        double h = double.Parse(Console.ReadLine());
+                        result = 0.5 * base_triangle * h;
+                        break;
+                }
+                break;
+            case 2: // Четырехугольник
+                switch (type_of_operation)
+                {
+                    case 1: // Периметр
+                        Console.Write("Введите сторону a: ");
+                        double a = double.Parse(Console.ReadLine());
+                        Console.Write("Введите сторону b: ");
+                        double b = double.Parse(Console.ReadLine());
+                        Console.Write("Введите сторону c: ");
+                        double c = double.Parse(Console.ReadLine());
+                        Console.Write("Введите сторону d: ");
+                        double d = double.Parse(Console.ReadLine());
+                        result = a + b + c + d;
+                        break;
+                    case 2: // Площадь
+                        Console.Write("Введите длину: ");
+                        double length = double.Parse(Console.ReadLine()); //Тоже ругается
+                        Console.Write("Введите ширину: ");
+                        double width = double.Parse(Console.ReadLine());
+                        result = length * width;
+                        break;
+                }
+                break;
+            case 3: // Круг
+                switch (type_of_operation)
+                {
+                    case 1: // Периметр
+                        Console.Write("Введите радиус: ");
+                        double r = double.Parse(Console.ReadLine());
+                        result = 2 * pi * r;
+                        break;
+                    case 2: // Площадь
+                        Console.Write("Введите радиус: ");
+                        double radius = double.Parse(Console.ReadLine());
+                        result = pi * radius * radius; 
+                        break;
+                }
+                break;
+        }
+        Console.WriteLine();
+        Console.WriteLine($"Результат: {result}");
 
 
 
