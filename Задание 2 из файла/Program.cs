@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class MainClass
 {
@@ -100,6 +101,27 @@ public class MainClass
         Console.WriteLine("\tТруд");
         Console.WriteLine("\t\tМай");
         */
+        /*
+        Console.WriteLine("Упражнение 11");
+        Console.WriteLine();
+        Console.WriteLine("Введите два числа через enter");
+        try
+        {
+            double x1 = double.Parse(Console.ReadLine().Replace('.', ','));
+            double x2 = double.Parse(Console.ReadLine().Replace('.', ','));
+            double x3 = x1;
+            x1 = x2;
+            x2 = x3;
+            Console.WriteLine(1);
+            Console.WriteLine(x1);
+            Console.WriteLine(x2);
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Неккоректный ввод!");
+        }
+        */
+        /*
         Console.WriteLine("Упражнение 12");
         Console.WriteLine();
         Console.WriteLine("1.Треугольник");
@@ -187,6 +209,172 @@ public class MainClass
         }
         Console.WriteLine();
         Console.WriteLine($"Результат: {result}");
+        */
+        /*
+        Console.WriteLine("Упражнение 13");
+        Console.WriteLine();
+        double number = double.Parse(Console.ReadLine());
+        Console.WriteLine($"Вы ввели число - {number}");
+        */
+        /*
+        Console.WriteLine("Упражнение 14");
+        Console.WriteLine();
+        Console.WriteLine("2 кг");
+        Console.WriteLine("13 17");
+        */
+        /*
+        Console.WriteLine("Упражнение 15");
+        Console.WriteLine();
+
+        Random number = new Random();
+
+        for (int i = 0; i < 4; i++)
+        {
+            Console.WriteLine(number.Next(1, 10000));
+        }
+        */
+        /*
+        Console.WriteLine("Упражнение 16");
+        Console.WriteLine();
+
+        Console.WriteLine("Введите коэффициенты квадратного уравнения");
+
+        Console.Write("Введите коэффициент a: ");
+        double a = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Введите коэффициент b: ");
+        double b = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Введите коэффициент c: ");
+        double c = Convert.ToDouble(Console.ReadLine());
+
+        double discriminant = b * b - 4 * a * c;
+
+        if (discriminant > 0)
+        {
+            double x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+            double x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+            Console.WriteLine("Уравнение имеет два корня:");
+            Console.WriteLine($"x1 = {x1}");
+            Console.WriteLine($"x2 = {x2}");
+        }
+        else if (discriminant == 0)
+        {
+            double x = -b / (2 * a);
+            Console.WriteLine("Уравнение имеет один корень:");
+            Console.WriteLine($"x = {x}");
+        }
+        else
+        {
+            Console.WriteLine("Уравнение не имеет корней");
+        }
+        */
+        /*
+        Console.WriteLine("Упражнение 17");
+        Console.WriteLine();
+        Console.WriteLine("Введите два целых числа через enter:");
+        int x1 = int.Parse(Console.ReadLine());
+        int x2 = int.Parse(Console.ReadLine());
+
+        double average_arithmetic = (x1 + x2) / 2;
+        double average_geometric = Math.Sqrt(x1 * x2);
+
+        Console.WriteLine($"Среднее арифметическое: {average_arithmetic}, среднее геометрическое: {average_geometric}");
+        */
+        /*
+        Console.WriteLine("Упражнение 18");
+        Console.WriteLine();
+        Console.Write("Введите точку на оси x: ");
+        double x = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Введите точку на оси y: ");
+        double y = Convert.ToDouble(Console.ReadLine());
+
+        double distance = Math.Sqrt(x * x + y * y);
+
+        Console.WriteLine($"Расстояние между двумя точками: {distance}");
+        */
+        /*
+        Console.WriteLine("Упражнение 19");
+        Console.WriteLine();
+        Console.Write("Введите число a: ");
+        double a = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите число b: ");
+        double b = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите число c: ");
+        double c = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Схема 1");
+        double d = b;
+        b = c;
+        c = a;
+        a = d;
+        Console.WriteLine($"Результат: a - {a}, b - {b}, c - {c}");
+            //Console.WriteLine("Схема 2");
+            //double d = b;
+            //b = a;
+            //a = c;
+            //c = d;
+            //Console.WriteLine($"Результат: a - {a}, b - {b}, c - {c}");
+        */
+        /*
+        Console.WriteLine("Упражнение 20");
+        Console.WriteLine();
+        Console.Write("Введите количество секунд: ");
+        int n = int.Parse(Console.ReadLine());
+        int hours = n / 3600;
+        int minutes = (n % 3600) / 60;
+        int seconds = (n % 3600) % 60;
+
+        Console.WriteLine($"Полных часов прошло: {hours}");
+        Console.WriteLine($"Полных минут прошло с начала очередного часа: {minutes}");
+        Console.WriteLine($"Полных секунд прошло с начала очередной минуты: {seconds}");
+        */
+        /*
+        Console.WriteLine("Упражнение 21");
+        Console.WriteLine();
+        int length = 543;
+        int result = 0;
+        while (length > 130)
+        {
+            length -= 130;
+            result++;
+        }
+        Console.WriteLine($"Можно отрезать - {result} квадратов");
+        */
+        /*
+        Console.WriteLine("Упражнение 22");
+        Console.WriteLine();
+        Console.Write("Введите трёхзначное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        int last_digit = number % 10;
+        int new_number = last_digit * 100 + number / 10;
+
+        Console.WriteLine($"Полученное число: {new_number}");
+        */
+        /*
+        Console.WriteLine("Упражнение 23");
+        Console.WriteLine();
+        Console.Write("Введите число, большее 999: ");
+        int n = int.Parse(Console.ReadLine());
+        if (n <= 999)
+        {
+            Console.WriteLine("Число должно быть больше 999.");
+        }
+        else
+        {
+            int hundreds = (n % 1000) / 100;
+            int thousands = n / 1000;
+
+            Console.WriteLine($"Кол-во сотен в числе: {hundreds}");
+            Console.WriteLine($"Кол-во тысяч в числе: {thousands}");
+        }
+        */
+        Console.WriteLine("Упражнение 24");
+        Console.WriteLine();
+        
+        
 
 
 
@@ -195,20 +383,5 @@ public class MainClass
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }   
+        }   
 }
