@@ -371,17 +371,298 @@ public class MainClass
             Console.WriteLine($"Кол-во тысяч в числе: {thousands}");
         }
         */
+        /*
         Console.WriteLine("Упражнение 24");
         Console.WriteLine();
+        Console.Write("Введите четырехзначное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        int reverse_number = int.Parse($"{number % 10}{number % 100 / 10}{number / 100 % 10}{number / 1000}");
+        Console.WriteLine($"Число, полученное при прочтении его цифр справа налево: {reverse_number}");
         
+        int n2143= int.Parse($"{number / 100 % 10}{number / 1000}{number % 10}{number % 100 / 10}");
+        Console.WriteLine($"Число, образуемое при перестановке первой и второй, третьей и четвертой цифр: {n2143}");
         
+        int n1324 = int.Parse($"{number / 1000}{number % 100 / 10}{number / 100 % 10}{number % 10}");
+        Console.WriteLine($"Число, образуемое при перестановке второй и третьей цифр: {n1324}");
+        
+        int n3412 = int.Parse($"{number % 100 / 10}{number % 10}{number / 1000}{number / 100 % 10}");
+        Console.WriteLine($"Число, образуемое при перестановке двух первых и двух последних цифр: {n3412}");
+        */
+        /*
+        Console.WriteLine("Упражнение 25");
+        Console.WriteLine();
+        Console.Write("Введите число n, такое что 100 <= n <= 999, десятки не равны нулю: ");
+        int n = int.Parse(Console.ReadLine());
 
+        if (n < 100 && n > 999 && (n / 10) % 10 == 0)
+        {
+            Console.WriteLine("Число должно быть от 100 до 999 и десятки не должны быть равны нулю.");
+        }
 
+        int last_digit = n / 100;
+        int x = n % 100 * 10 + last_digit;
 
+        Console.WriteLine($"Число x: {x}");
+        */
+        /*
+        Console.WriteLine("Упражнение 26");
+        Console.WriteLine();
+        Console.Write("Введите часы:");
+        int h = int.Parse(Console.ReadLine());
+        Console.Write("Введите минуты:");
+        int m = int.Parse(Console.ReadLine());
+        Console.Write("Введите секунды:");
+        int s = int.Parse(Console.ReadLine());
 
+        double hours = 12;
+        double minutes = 60;
+        double seconds = 60;
+        double degrees = 360;
 
+        double hour_angle = 0.5 * ((h % hours) * minutes + m + s / seconds);
+        double minute_angle = 6 * (m + s / seconds);
+        double angle = Math.Abs(hour_angle - minute_angle);
 
+        if (angle > degrees / 2)
+        {
+            angle = degrees - angle;
+        }
 
+        Console.WriteLine($"Угол между положением часовой стрелки в начале суток и указанным временем: {angle} градусов");
+        */
+        /*
+        Console.WriteLine("Упражнение 27");
+        Console.WriteLine();
+        Console.Write("Введите угол y (0 <= y <= 2): ");
+        double y = double.Parse(Console.ReadLine());
+        if (y < 0 || y > 2)
+        {
+            Console.WriteLine("Угол y должен быть в диапазоне от 0 до 2.");
+        }
 
-        }   
+        int hours = (int)(y * 12);
+        double hourAngle = (y * 360) / 12;
+        
+        double minuteAngle = (hourAngle * 12) / 60; 
+        int minutes = (int)(minuteAngle * 60 / 360);
+
+        Console.WriteLine($"Часовая стрелка соответствует {hours} полным часам и {minutes} полным минутам.");
+        Console.WriteLine($"Угол для минутной стрелки: {minuteAngle} градусов.");
+        */
+        /*
+        Console.WriteLine("Упражнение 28");
+        Console.WriteLine();
+        Console.WriteLine("Введите три вещественных числа через enter:");
+
+        double x1 = double.Parse(Console.ReadLine());
+        double x2 = double.Parse(Console.ReadLine());
+        double x3 = double.Parse(Console.ReadLine());
+        double min = Math.Abs(x1);
+        double result = x1;
+
+        if (Math.Abs(x2) < min)
+        {
+            min = Math.Abs(x2);
+            result = x2;
+        }
+        if (Math.Abs(x3) < min)
+        {
+            min = Math.Abs(x3);
+            result = x3;
+        }
+        Console.WriteLine($"Меньшее по модулю число: {result}");
+        */
+        /*
+        Console.WriteLine("Упражнение 29");
+        Console.WriteLine();
+        Console.WriteLine("Введите три числа через enter:");
+
+        int[] s = {int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine())};
+        int Maxx = s.Max();
+        int Minn = s.Min();
+        Console.WriteLine($"Сумма большего и меньшего чисел: {Maxx + Minn}");
+        */
+        /*
+        Console.WriteLine("Упражнение 30");
+        Console.WriteLine();
+        Console.Write("Введите натуральное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        int count = 0;
+        for (int i = 1; i <= number; i++)
+        {
+            if (number % i == 0)
+            {
+                count++;
+            }
+        }
+        Console.WriteLine($"Общее количество делителей числа: {count}");
+        */
+        /*
+        Console.WriteLine("Упражнение 31");
+        Console.WriteLine();
+        Console.WriteLine("Введите коэффициенты A, B, C и D для уравнения A*X3 + B*X2 + C*X + D = 0: ");
+
+        Console.Write("Введите коэффициент A: ");
+        int A = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите коэффициент B: ");
+        int B = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите коэффициент C: ");
+        int C = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите коэффициент D: ");
+        int D = int.Parse(Console.ReadLine());
+
+        bool flag = false;
+
+        for (int x = -100; x <= 100; x++)
+        {
+            if (A * x * x * x + B * x * x + C * x + D == 0)
+            {
+                Console.WriteLine($"Корень: {x}");
+                flag = true;
+            }
+        }
+
+        if (flag == false)
+        {
+            Console.WriteLine("Целые корни не найдены.");
+        }
+        */
+        /*
+        Console.WriteLine("Упражнение 32");
+        Console.WriteLine();
+        Console.Write("Введите первый элемент арифметической прогрессии: ");
+        double a1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите второй элемент арифметической прогрессии: ");
+        double a2 = double.Parse(Console.ReadLine());
+    
+        Console.Write("Введите номер элемента прогрессии: ");
+        int n = int.Parse(Console.ReadLine());
+
+        double d = a2 - a1;
+        double a_n = a1 + (n - 1) * d;
+
+        Console.WriteLine($"{n} элемент арифметической прогрессии равен: {a_n}");
+        */
+        /*
+        Console.WriteLine("Упражнение 33");
+        Console.WriteLine();
+        Console.WriteLine("Введите вашу статус (студент, пенсионер и т.д):");
+        string status = Console.ReadLine().ToLower();
+
+        Console.WriteLine("Вы трудоустроены? (да/нет):");
+        string employment_status = Console.ReadLine().ToLower();
+
+        bool is_pensioner = status.Contains("пенсионер");
+        bool is_student = status.Contains("студент");
+        bool is_employed = employment_status.Contains("да");
+
+        if (is_pensioner && is_student)
+        {
+            Console.WriteLine("Кредит не дадут.");
+        }
+        else if ((is_pensioner || is_student) && !is_employed)
+        {
+            Console.WriteLine("Кредит дадут.");
+        }
+        else if (is_employed)
+        {
+            Console.WriteLine("Кредит не дадут.");
+        }
+        else
+        {
+            Console.WriteLine("Кредит не дадут.");
+        }
+        */
+        /*
+        Console.WriteLine("Упражнение 34");
+        Console.WriteLine();
+        Console.WriteLine("a) Как вас зовут?");
+        Console.WriteLine(Console.ReadLine());
+
+        Console.WriteLine("б) Как вас зовут?");
+        Console.WriteLine($"Привет, {Console.ReadLine()}!");
+        */
+        /*
+        Console.WriteLine("Упражнение 35");
+        Console.WriteLine();
+        string greetings = Console.ReadLine();
+
+        Console.WriteLine("Как тебя зовут?");
+        string user_name = Console.ReadLine();
+
+        Console.WriteLine($"Привет, {user_name}.");
+
+        Console.ReadLine();
+        Console.WriteLine("Да");
+
+        Console.ReadLine();
+        Console.WriteLine("Нет");
+
+        Thread.Sleep(5000);
+
+        Console.WriteLine("Но могу показать");
+
+        Random random = new Random();
+        ConsoleColor[] colors = (ConsoleColor[])ConsoleColor.GetValues(typeof(ConsoleColor));
+        Console.ForegroundColor = colors[random.Next(colors.Length)];
+
+        Console.WriteLine("Вжух типо цвет поменялся");
+
+        Console.ResetColor();
+        */
+        /*
+        Console.WriteLine("Упражнение 36");
+        Console.WriteLine();
+
+        Random random = new Random();
+        int[] random_digits = new int[12];
+        for (int i = 0; i < 12; i++)
+        {
+            random_digits[i] = random.Next(0, 10);
+        }
+
+        int[] user_digits = new int[12];
+        Console.WriteLine("Введите 12 цифр:");
+        for (int i = 0; i < 12; i++)
+        {
+            user_digits[i] = int.Parse(Console.ReadLine());
+        }
+
+        int sum1 = 0;
+        for (int i = 0; i < 12; i++)
+        {
+            if (i % 2 == 0)
+            {
+                sum1 += user_digits[i];
+            }
+            else
+            {
+                sum1 += user_digits[i] * 3;
+            }
+        }
+        int sum2 = 0;
+        for (int i = 0; i < 12; i++)
+        {
+            if (i % 2 == 0)
+            {
+                sum2 += random_digits[i];
+            }
+            else
+            {
+                sum2 += random_digits[i] * 3;
+            }
+        }
+        
+        int random_check_sum1 = (10 - (sum1 % 10)) % 10;
+        int user_check_sum2 = (10 - (sum2 % 10)) % 10;   
+        Console.WriteLine($"Контрольная цифра для рандомного штрихкода: {random_check_sum1}");
+        Console.WriteLine($"Контрольная цифра для введенного штрихкода: {user_check_sum2}");
+        */
+    }
 }
